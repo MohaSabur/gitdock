@@ -1,0 +1,4 @@
+#!/bin/bash
+cp /home/git/share/authorized_keys /home/git/.ssh/authorized_keys
+chmod 600 /home/git/.ssh/authorized_keys
+chown git:git /home/git/.ssh/authorized_keys

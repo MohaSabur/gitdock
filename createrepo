@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo -e "\nName of your repository?\n"
+read repname
+mkdir $repname
+cd $repname
+git init
+touch 1
+git add -A
+git commit -m "initial commit"
+chown -R git:git /home/git/$repname
+sudo -u git bash -c 'git config --global receive.denyCurrentBranch updateInstead'
